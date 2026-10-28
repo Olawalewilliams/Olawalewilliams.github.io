@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wale Williams — Filmmaker</title>
+<meta name="description" content="Wale Williams — wedding films, commercials, documentaries and music videos from Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070707;--fg:#eee;--mute:#8a8a8a;--gold:#c9a45c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}html.ns{scroll-behavior:auto}
+body{background:var(--bg);color:var(--fg);font-family:Inter,sans-serif;font-weight:300;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.grain{pointer-events:none;position:fixed;inset:-50%;z-index:90;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:g 1s steps(4) infinite}
+@keyframes g{0%{transform:translate(0)}25%{transform:translate(-5%,3%)}50%{transform:translate(4%,-4%)}75%{transform:translate(-3%,5%)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;background:linear-gradient(#000c,#0000)}
+.logo{font-family:'Bebas Neue';font-size:26px;letter-spacing:4px}
+nav ul{display:flex;gap:32px;list-style:none;font-size:12px;letter-spacing:3px;text-transform:uppercase}
+nav ul a:hover{color:var(--gold)}
+.hero{position:relative;height:100vh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
+.hero .bgv{position:absolute;inset:0;pointer-events:none;background:#000 url(https://i.ytimg.com/vi/lH7uu_A1agQ/maxresdefault.jpg) center 15%/cover}
+.hero iframe{position:absolute;top:50%;left:50%;width:177.78vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.15);border:0;opacity:0;transition:opacity 1.5s}
+.hero iframe.live{opacity:1}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000e 0%,#000a 45%,#0005 100%),linear-gradient(#0000 55%,#070707)}
+.bar{position:absolute;left:0;right:0;height:9vh;background:#000;z-index:3}.bar.t{top:0}.bar.b{bottom:0}
+.hero .txt{position:relative;z-index:4;padding:0 5vw 16vh}
+.kick{font-size:12px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+h1{font-family:'Bebas Neue';font-weight:400;font-size:clamp(72px,14vw,220px);line-height:.85;letter-spacing:2px}
+.tag{max-width:520px;margin-top:20px;font-size:17px;color:#ccc;line-height:1.6}
+.btn{display:inline-block;margin-top:30px;padding:14px 30px;border:1px solid var(--fg);font-size:12px;letter-spacing:4px;text-transform:uppercase;transition:.3s;cursor:pointer;background:none;color:var(--fg)}
+.btn:hover{background:var(--fg);color:#000}
+section{padding:110px 5vw}
+.h2{font-family:'Bebas Neue';font-weight:400;font-size:clamp(48px,7vw,96px);letter-spacing:2px;line-height:.9}
+.num{font-size:12px;letter-spacing:5px;color:var(--gold);margin-bottom:10px}
+.reel{position:relative;margin-top:40px;aspect-ratio:2.39/1;background:#000 center/cover;cursor:pointer;overflow:hidden}
+.reel img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s,filter .6s;filter:brightness(.6)}
+.reel:hover img{transform:scale(1.04);filter:brightness(.85)}
+.play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:linear-gradient(#0000 40%,#000c)}.play span{position:absolute;left:4%;bottom:7%;text-align:left!important;padding:0!important}
+.play i{width:90px;height:90px;border:1px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:26px;transition:.3s}
+.reel:hover .play i{background:#fff;color:#000}
+.play span{font-family:'Bebas Neue';font-size:clamp(24px,3vw,42px);letter-spacing:3px;text-align:center;padding:0 20px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:36px 0 34px}
+.filters button{background:none;border:1px solid #333;color:var(--mute);padding:10px 18px;font:400 11px Inter;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:.25s}
+.filters button:hover,.filters button.on{border-color:var(--gold);color:var(--fg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.card{position:relative;aspect-ratio:16/9;overflow:hidden;cursor:pointer;background:#111}
+.card img{width:100%;height:100%;object-fit:cover;filter:grayscale(.7) brightness(.65);transition:transform .9s,filter .5s}
+.card:hover img{transform:scale(1.07);filter:none}
+.tc{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-family:'Bebas Neue';font-size:38px;letter-spacing:4px;line-height:1;transition:transform .9s}
+.card:hover .tc{transform:scale(1.07)}
+.tc small{display:block;font:400 10px Inter;letter-spacing:4px;color:var(--gold);margin-top:10px}
+.meta{position:absolute;left:0;right:0;bottom:0;padding:18px;background:linear-gradient(#0000,#000e);transform:translateY(35%);opacity:.85;transition:.4s}
+.card:hover .meta{transform:none;opacity:1}
+.meta .c{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+.meta h3{font-family:'Bebas Neue';font-weight:400;font-size:24px;letter-spacing:1px;margin-top:4px}
+.meta p{font-size:12px;color:#aaa;margin-top:4px}
+.card.hide{display:none}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.ap{position:relative;padding:0 14% 14% 0}
+.ap .main{width:100%;aspect-ratio:1/1;object-fit:cover;filter:grayscale(1) contrast(1.1);display:block}
+.ap .sec{position:absolute;right:0;bottom:0;width:42%;aspect-ratio:4/5;object-fit:cover;border:6px solid var(--bg);box-shadow:0 20px 50px #000c}
+blockquote{font-family:'Bebas Neue';font-size:clamp(30px,3.2vw,46px);line-height:1.05;letter-spacing:1px;color:var(--gold);margin-top:26px;border-left:2px solid var(--gold);padding-left:20px}
+.about p{color:#bbb;line-height:1.8;margin-top:22px}
+.ph{border:1px dashed var(--gold);padding:18px;margin-top:22px;font-size:13px;color:var(--gold)}
+.stats{display:flex;gap:40px;margin-top:34px}.stats b{display:block;font-family:'Bebas Neue';font-size:46px;font-weight:400}.stats span{font-size:11px;letter-spacing:3px;color:var(--mute);text-transform:uppercase}
+.contact{text-align:center;border-top:1px solid #1c1c1c}
+.contact .h2{font-size:clamp(56px,10vw,150px)}
+.links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:30px}
+footer{padding:30px 5vw;font-size:11px;letter-spacing:3px;color:#555;text-align:center;text-transform:uppercase}
+#lb{position:fixed;inset:0;z-index:100;background:#000f;display:none;align-items:center;justify-content:center;padding:4vw}
+#lb.on{display:flex}
+#lb .fr{width:min(1200px,100%);aspect-ratio:16/9;background:#000}
+#lb iframe{width:100%;height:100%;border:0}
+#lb .x{position:absolute;top:20px;right:30px;font-size:40px;cursor:pointer;background:none;border:0;color:#fff}
+#lb .cap{position:absolute;bottom:3vh;left:0;right:0;text-align:center;font-family:'Bebas Neue';font-size:24px;letter-spacing:3px}
+.rev{opacity:0;transform:translateY(40px);transition:1s}.rev.in{opacity:1;transform:none}
+@media(max-width:760px){.hero:after{background:linear-gradient(#000a,#000c 60%,#070707)}nav ul{display:none}.about{grid-template-columns:1fr}.grid{grid-template-columns:1fr}section{padding:80px 6vw}.bar{height:6vh}.hero .txt{padding-bottom:12vh}.stats{gap:24px}}
+</style></head><body>
+<div class="grain"></div>
+<nav><a class="logo" href="#top">WALE WILLIAMS</a><ul><li><a href="#reel">Showreel</a></li><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+
+<header class="hero" id="top">
+ <div class="bgv"><iframe id="bgv" src="https://www.youtube-nocookie.com/embed/lH7uu_A1agQ?autoplay=1&mute=1&controls=0&loop=1&playlist=lH7uu_A1agQ&playsinline=1&modestbranding=1&rel=0&start=20&enablejsapi=1" allow="autoplay; encrypted-media" title="Background reel" referrerpolicy="strict-origin-when-cross-origin" tabindex="-1"></iframe></div>
+ <div class="bar t"></div><div class="bar b"></div>
+ <div class="txt rev">
+  <div class="kick">Filmmaker · Videographer · Lagos, Nigeria</div>
+  <h1>WALE<br>WILLIAMS</h1>
+  <p class="tag">Weddings, commercials and stories, shot like cinema. Films that feel the way the day felt.</p>
+  <a class="btn" href="#work">View the work</a>
+ </div>
+</header>
+
+<section id="reel">
+ <div class="num">01 — FEATURED</div><h2 class="h2 rev">The Showreel</h2>
+ <div class="reel rev" data-yt="lH7uu_A1agQ" data-t="Yoruba Traditional Wedding">
+  <img src="https://i.ytimg.com/vi/lH7uu_A1agQ/maxresdefault.jpg" alt="Yoruba Traditional Wedding">
+  <div class="play"><i>▶</i><span>Yoruba Traditional Wedding — Everything that happens</span></div>
+ </div>
+</section>
+
+<section id="work">
+ <div class="num">02 — SELECTED WORK</div><h2 class="h2 rev">The Work</h2>
+ <div class="filters" id="filters"></div>
+ <div class="grid" id="grid"></div>
+</section>
+
+<section id="about"><div class="about">
+ <div class="ap rev"><img class="main" src="about-bw.jpg" alt="Wale Williams, black and white portrait"><img class="sec" src="about-portrait.webp" alt="Wale Williams in a tan suit"></div>
+ <div class="rev">
+  <div class="num">03 — ABOUT</div><h2 class="h2">Behind<br>The Lens</h2>
+  <blockquote>“I never went to film school. I just started.”</blockquote>
+  <p>Four years ago, Wale was a graphic designer who got tired of static images, so he taught himself to make them move. No degree, no expensive gear, just a camera, a lot of bad first tries, and the stubborn belief that story matters more than credentials.</p>
+  <p>Today he's a Creative Director and Editor at a global organisation, CCI Global, and the founder of his own production company, <b style="color:var(--fg);font-weight:600">ITAN Studios</b>. He's shot short films, told stories for startups, and photographed events where you learn to think on your feet, or miss the shot.</p>
+  <div class="stats"><div><b>4</b><span>Years self-taught</span></div><div><b>23+</b><span>Films online</span></div><div><b>ITAN</b><span>Studios founder</span></div></div>
+ </div></div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="num">04 — CONTACT</div><h2 class="h2 rev">Let's Make<br>Something</h2>
+ <p style="color:#aaa;margin-top:20px">Booking weddings, commercials and brand films.</p>
+ <div class="links">
+  <a class="btn" href="mailto:thewilliamsofafrica@gmail.com">thewilliamsofafrica@gmail.com</a>
+  <a class="btn" href="https://www.youtube.com/@thewalewilliams" target="_blank" rel="noopener">YouTube @thewalewilliams</a>
+ </div>
+</section>
+<footer>© <span id="y"></span> Wale Williams · ITAN Studios · All films by Wale Williams</footer>
+
+<div id="lb"><button class="x" aria-label="Close">×</button><div class="fr"></div><div class="cap"></div></div>
+
+<script>
+const W=[
+['yt','lH7uu_A1agQ','Yoruba Traditional Wedding','Weddings','Everything that happens at a Yoruba wedding'],
+['yt','a6JPLbdJXG8','A Celebration of Love & Laughter','Weddings','A simple wedding film · 4K'],
+['yt','immYTeQrESU','Nancy & Anselm','Weddings','A must-watch Nigerian wedding'],
+['yt','McPnxyg9cJU','Dee & Jay — Trailer','Weddings','Wedding trailer'],
+['yt','4rIrMbF8huE','Nigerian Wedding','Weddings','Wedding film'],
+['yt','b16enzt3rAE','Nigerian Traditional Wedding','Weddings','Traditional ceremony'],
+['yt','9KS8ZZ8tD6o','Can I Call You Rose','Weddings','Vintage Nigerian wedding look'],
+['dr','1Nar_NKP0wpi4vFVOgfmqfisb-fRVnbiV','Mr Putty','Commercials & Brand','TV commercial'],
+['dr','1y_Zk5AsHzja-lAXUhpGvU4INv85ozatn','Comfy','Commercials & Brand','Brand film'],
+['dr','1U4IGMse1BA0fyDiEDPMSDkVMTxWdHQk6','RevUp','Commercials & Brand','Brand film'],
+['dr','1TJNLfmdomjAedPz5iDzqoGHG7Ezyg72G','SAO Agro','Commercials & Brand','Corporate brand film'],
+['yt','oiJFhudGW0M','Your Brand / Your Branding','Commercials & Brand','Brand talk'],
+['yt','AVdvy8_NgfE','Brand-Killers','Commercials & Brand','Brand talk'],
+['dr','1QNQEhYKL98k90e2L2e2TxpAyWY3wcwfI','Meltdown','Short Films & Documentary','Narrative short'],
+['dr','1OpygoHsr4tOJELBwB_eLXUJBYMqf6d-a','Documentary','Short Films & Documentary','Documentary edit'],
+['dr','1Zo6vtTNHan7IF4-j4W8-S-B9KWQf4299','Love Code','Short Films & Documentary','Short film'],
+['dr','1Q_E5BsQnTQQYFkgiks7tZZLr88-Wfnqd','PFNNN','Short Films & Documentary','Short film'],
+['yt','p0LZBVv4-5o','Letters Across Channels','Short Films & Documentary','Short film'],
+['yt','fB5muZEeDPs','What Really Matters','Short Films & Documentary','Short film'],
+['dr','1IaaVBeuGbmVrRwCR-DZb0fzmiHJUBNos','JIV — Spell','Music & Live','Music video'],
+['yt','yHKm7lE_t1s','Paul Rarity Live','Music & Live','Live in concert'],
+['dr','1vblaPj0Y9zIZ9t8lCv4ORCaPEMPsxbtz','GetFit — Kike','Corporate & Testimonials','Client testimonial'],
+['yt','ZRHUnQjGAlE','Why Branding Matters','Corporate & Testimonials','Pt. 01'],
+['yt','txDlNs2wFI0','A Little BTS of the Magic','Reels/BTS','Behind the scenes'],
+['yt','vc9XAmT0lXo','A One Hour Shoot','Reels/BTS','Behind the scenes'],
+['yt','y93IbW0dDe4','Trad Wedding Reel','Reels/BTS','Short'],
+['yt','5G_jc5hs5UM','Old School Looks','Reels/BTS','Short'],
+['yt','KqoDMag2pwk','What Do You Do?','Reels/BTS','Short']];
+const cats=['All','Weddings','Commercials & Brand','Short Films & Documentary','Music & Live','Corporate & Testimonials','Reels/BTS'];
+const g=document.getElementById('grid'),f=document.getElementById('filters');
+const grads=['#2a1a0e,#0a0a0a','#0e1a2a,#050505','#2a0e14,#070707','#1a2a1e,#060606'];
+W.forEach((w,i)=>{const d=document.createElement('div');d.className='card rev';d.dataset.c=w[3];d.dataset[w[0]]=w[1];d.dataset.t=w[2];
+ const vis=w[0]=='yt'?`<img loading="lazy" src="https://i.ytimg.com/vi/${w[1]}/hqdefault.jpg" alt="${w[2]}">`:`<div class="tc" style="background:linear-gradient(135deg,${grads[i%4]})"><div>${w[2]}<small>${w[4].toUpperCase()}</small></div></div>`;
+ d.innerHTML=vis+`<div class="meta"><div class="c">${w[3]}</div><h3>${w[2]}</h3><p>${w[4]}</p></div>`;g.appendChild(d)});
+cats.forEach((c,i)=>{const b=document.createElement('button');b.textContent=c;if(!i)b.className='on';b.onclick=()=>{f.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');g.querySelectorAll('.card').forEach(k=>k.classList.toggle('hide',c!='All'&&k.dataset.c!=c))};f.appendChild(b)});
+const lb=document.getElementById('lb'),fr=lb.querySelector('.fr');
+function open(el){const s=el.dataset.yt?`https://www.youtube-nocookie.com/embed/${el.dataset.yt}?autoplay=1&rel=0`:`https://drive.google.com/file/d/${el.dataset.dr}/preview`;fr.innerHTML=`<iframe referrerpolicy="strict-origin-when-cross-origin" src="${s}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;lb.querySelector('.cap').textContent=el.dataset.t;lb.classList.add('on')}
+function close(){lb.classList.remove('on');fr.innerHTML=''}
+document.querySelectorAll('.card,.reel').forEach(e=>e.onclick=()=>open(e));
+lb.onclick=e=>{if(e.target===lb||e.target.classList.contains('x'))close()};
+document.addEventListener('keydown',e=>e.key=='Escape'&&close());
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.1});
+document.querySelectorAll('.rev').forEach(e=>io.observe(e));
+// reveal background video only once it is actually playing (poster stays otherwise)
+const q=new URLSearchParams(location.search);
+if(q.has('shot')){document.querySelector('.hero').style.height='900px';document.getElementById('bgv').remove();document.querySelectorAll('.rev').forEach(e=>e.classList.add('in'));if(q.get('shot')=='grid')addEventListener('load',()=>setTimeout(()=>scrollTo(0,document.getElementById('work').offsetTop-20),300))}
+else{const t=document.createElement('script');t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t);
+window.onYouTubeIframeAPIReady=()=>new YT.Player('bgv',{events:{onStateChange:e=>{if(e.data==1)document.getElementById('bgv').classList.add('live')}}})}
+document.getElementById('y').textContent=new Date().getFullYear();
+</script></body></html>
