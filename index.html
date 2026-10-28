@@ -18,9 +18,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:
 nav ul{display:flex;gap:32px;list-style:none;font-size:12px;letter-spacing:3px;text-transform:uppercase}
 nav ul a:hover{color:var(--gold)}
 .hero{position:relative;height:100vh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
-.hero .bgv{position:absolute;inset:0;pointer-events:none;background:#000 url(https://i.ytimg.com/vi/lH7uu_A1agQ/maxresdefault.jpg) center 15%/cover}
-.hero iframe{position:absolute;top:50%;left:50%;width:177.78vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.15);border:0;opacity:0;transition:opacity 1.5s}
-.hero iframe.live{opacity:1}
+.hero .bgv{position:absolute;inset:0;pointer-events:none;background:#000 url(hero-poster.jpg) center/cover}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000e 0%,#000a 45%,#0005 100%),linear-gradient(#0000 55%,#070707)}
 .bar{position:absolute;left:0;right:0;height:9vh;background:#000;z-index:3}.bar.t{top:0}.bar.b{bottom:0}
 .hero .txt{position:relative;z-index:4;padding:0 5vw 16vh}
@@ -80,7 +79,7 @@ footer{padding:30px 5vw;font-size:11px;letter-spacing:3px;color:#555;text-align:
 <nav><a class="logo" href="#top">WALE WILLIAMS</a><ul><li><a href="#reel">Showreel</a></li><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></nav>
 
 <header class="hero" id="top">
- <div class="bgv"><iframe id="bgv" src="https://www.youtube-nocookie.com/embed/lH7uu_A1agQ?autoplay=1&mute=1&controls=0&loop=1&playlist=lH7uu_A1agQ&playsinline=1&modestbranding=1&rel=0&start=20&enablejsapi=1" allow="autoplay; encrypted-media" title="Background reel" referrerpolicy="strict-origin-when-cross-origin" tabindex="-1"></iframe></div>
+ <div class="bgv"><video id="bgv" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" src="hero.mp4" tabindex="-1" aria-hidden="true"></video></div>
  <div class="bar t"></div><div class="bar b"></div>
  <div class="txt rev">
   <div class="kick">Filmmaker · Videographer · Lagos, Nigeria</div>
@@ -172,10 +171,7 @@ lb.onclick=e=>{if(e.target===lb||e.target.classList.contains('x'))close()};
 document.addEventListener('keydown',e=>e.key=='Escape'&&close());
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.1});
 document.querySelectorAll('.rev').forEach(e=>io.observe(e));
-// reveal background video only once it is actually playing (poster stays otherwise)
 const q=new URLSearchParams(location.search);
-if(q.has('shot')){document.querySelector('.hero').style.height='900px';document.getElementById('bgv').remove();document.querySelectorAll('.rev').forEach(e=>e.classList.add('in'));if(q.get('shot')=='grid')addEventListener('load',()=>setTimeout(()=>scrollTo(0,document.getElementById('work').offsetTop-20),300))}
-else{const t=document.createElement('script');t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t);
-window.onYouTubeIframeAPIReady=()=>new YT.Player('bgv',{events:{onStateChange:e=>{if(e.data==1)document.getElementById('bgv').classList.add('live')}}})}
+if(q.has('shot')){document.querySelector('.hero').style.height='900px';document.querySelectorAll('.rev').forEach(e=>e.classList.add('in'));if(q.get('shot')=='grid')addEventListener('load',()=>setTimeout(()=>scrollTo(0,document.getElementById('work').offsetTop-20),300))}
 document.getElementById('y').textContent=new Date().getFullYear();
 </script></body></html>
