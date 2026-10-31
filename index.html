@@ -119,7 +119,7 @@ nav .soc{display:flex;gap:8px}nav .soc a{width:28px;height:28px;border-radius:50
 .meta .c{color:var(--k);font-weight:700;letter-spacing:2px}.meta h3{color:var(--fg);font-size:26px}.meta p{color:var(--mute)}.meta p:after{content:"  see project →";color:var(--fg);opacity:0;transition:opacity .35s}.card:hover .meta p:after{opacity:1}
 .bel{opacity:1;background:#fff;color:#141414;border:0;border-radius:20px;font-weight:700;top:10px;right:10px}.bel:hover{background:var(--Design);color:#fff}
 .card.more{border:0;background:var(--Design);color:#fff;aspect-ratio:16/10;border-radius:0}.card.more small{color:#fffc}.card.more:hover{background:#141414}
-.card.soon{background:#e9e9e9;color:var(--fg);aspect-ratio:16/10}
+.card.soon{background:#e9e9e9;color:var(--fg);aspect-ratio:auto;min-height:320px;border-color:var(--Photography)}.card.soon.hide{display:none}
 .about blockquote{color:var(--fg);border-color:var(--Design)}.ap .sec{border-color:var(--bg);box-shadow:0 20px 50px #0003}
 .stats span,.ph{color:var(--mute)}
 .contact{background:#141414;color:#fff}.contact .h2{color:#fff}.contact .num{color:#aaa}.contact .btn{border-color:#fff;color:#fff}.contact .btn:hover{background:var(--Design);border-color:var(--Design)}
@@ -195,25 +195,19 @@ const W=[
 ['dr','1y_Zk5AsHzja-lAXUhpGvU4INv85ozatn','Comfy','Video','Commercials & Brand','Brand film'],
 ['dr','1U4IGMse1BA0fyDiEDPMSDkVMTxWdHQk6','RevUp','Video','Commercials & Brand','Brand film'],
 ['dr','1TJNLfmdomjAedPz5iDzqoGHG7Ezyg72G','SAO Agro','Video','Commercials & Brand','Corporate brand film'],
-['yt','oiJFhudGW0M','Your Brand / Your Branding','Video','Commercials & Brand','Brand talk'],
-['yt','AVdvy8_NgfE','Brand-Killers','Video','Commercials & Brand','Brand talk'],
 ['dr','1QNQEhYKL98k90e2L2e2TxpAyWY3wcwfI','Meltdown','Film','Feature trailer','Narrative · trailer'],
 ['dr','1OpygoHsr4tOJELBwB_eLXUJBYMqf6d-a','Documentary','Film','Short Films & Documentary','Documentary edit'],
 ['dr','1Zo6vtTNHan7IF4-j4W8-S-B9KWQf4299','Love Code','Film','Short Films & Documentary','Short film'],
 ['dr','1Q_E5BsQnTQQYFkgiks7tZZLr88-Wfnqd','PFNNN','Film','Short Films & Documentary','Short film'],
 ['yt','p0LZBVv4-5o','Letters Across Channels','Film','Short Films & Documentary','Short film'],
-['yt','fB5muZEeDPs','What Really Matters','Film','Short Films & Documentary','Short film'],
 ['dr','1IaaVBeuGbmVrRwCR-DZb0fzmiHJUBNos','JIV — Spell','Video','Music & Live','Music video'],
 ['yt','yHKm7lE_t1s','Paul Rarity Live','Video','Music & Live','Live in concert'],
-['dr','1vblaPj0Y9zIZ9t8lCv4ORCaPEMPsxbtz','GetFit — Kike','Video','Corporate & Testimonials','Client testimonial'],
-['yt','ZRHUnQjGAlE','Why Branding Matters','Video','Corporate & Testimonials','Pt. 01'],
 ['yt','txDlNs2wFI0','A Little BTS of the Magic','Video','Reels & BTS','Behind the scenes'],
 ['yt','vc9XAmT0lXo','A One Hour Shoot','Video','Reels & BTS','Behind the scenes'],
 ['yt','y93IbW0dDe4','Trad Wedding Reel','Video','Reels & BTS','Short'],
-['yt','5G_jc5hs5UM','Old School Looks','Video','Reels & BTS','Short'],
-['yt','KqoDMag2pwk','What Do You Do?','Video','Reels & BTS','Short']];
+['yt','5G_jc5hs5UM','Old School Looks','Video','Reels & BTS','Short']];
 const I=[
-['img/photo-01.jpg','Celebration','Photography','Event'],['img/photo-02.jpg','Brothers','Photography','Portrait'],['img/photo-03.jpg','The Crew','Photography','Event'],['img/photo-04.jpg','Side by Side','Photography','Portrait'],['img/photo-05.jpg','Laughter','Photography','Event'],['img/photo-06.jpg','The Team','Photography','Group portrait'],['img/photo-07.jpg','Full Length','Photography','Portrait'],['img/photo-08.jpg','Leather & Light','Photography','Portrait'],['img/photo-09.jpg','Candid','Photography','Portrait'],['img/photo-10.jpg','Cream Suit','Photography','Portrait'],['img/photo-11.jpg','Together','Photography','Event'],
+
 ['img/behance-identity-design-for-cubana-beauty-shop.jpg',"Identity design for Cubana beauty shop",'Design','Behance project','https://www.behance.net/gallery/119121097/Identity-design-for-Cubana-beauty-shop'],['img/behance-logo-reveal-for-cubana-beauty-shop.jpg',"Logo reveal for CUBANA Beauty shop",'Design','Behance project','https://www.behance.net/gallery/119675705/Logo-reveal-for-CUBANA-Beauty-shop'],['img/behance-identity-design.jpg',"Identity Design",'Design','Behance project','https://www.behance.net/gallery/147453503/IDENTITY-DESIGN'],['img/behance-identity.jpg',"Identity",'Design','Behance project','https://www.behance.net/gallery/71188361/Identity'],['img/behance-ella-matthew.jpg',"Ella Matthew",'Design','Behance project','https://www.behance.net/gallery/92087617/ELLA-MATTHEW'],['img/behance-woman-of-colour.jpg',"Woman of Colour",'Design','Behance project','https://www.behance.net/gallery/92086795/WOMAN-OF-COLOUR'],['img/behance-brochure-design-for-femi-micheal-photography.jpg',"Brochure Design for Femi Micheal Photography",'Design','Behance project','https://www.behance.net/gallery/92086585/BROCHURE-DESIGN-FOR-FEMI-MICHEAL-PHOTOGRAPHY'],['img/behance-slides.jpg',"Slides",'Design','Behance project','https://www.behance.net/gallery/147453123/Slides'],['img/behance-other-projects.jpg',"Other Projects",'Design','Behance project','https://www.behance.net/gallery/92087025/OTHER-PROJECTS'],['img/behance-design-potfolio.jpg',"Design Portfolio",'Design','Behance project','https://www.behance.net/gallery/165221241/DESIGN-POTFOLIO'],['img/behance-design-portfolio.jpg',"Design Portfolio (2020)",'Design','Behance project','https://www.behance.net/gallery/92151455/DESIGN-PORTFOLIO']];
 const cats=['All','Design','Video','Film','Photography'];
 const g=document.getElementById('grid'),f=document.getElementById('filters');
@@ -226,7 +220,7 @@ I.forEach(w=>{const d=document.createElement('div');d.className='card im rev';d.
 {const m=document.createElement('a');m.className='card more';m.dataset.c='Design';m.href='https://www.behance.net/thewilliams';m.target='_blank';m.rel='noopener';m.innerHTML='<div>View more on Behance<small>BEHANCE.NET/THEWILLIAMS ↗</small></div>';g.appendChild(m)}
 cats.slice(1).forEach(c=>{if(!g.querySelector(`.card[data-c="${c}"]`)){const d=document.createElement('div');d.className='card soon hide';d.dataset.c=c;d.dataset.soon=1;d.innerHTML=`<div>${c}<small>COMING SOON</small></div>`;g.appendChild(d)}});
 const fil=c=>g.querySelectorAll('.card').forEach(k=>k.classList.toggle('hide',k.dataset.soon?c!=k.dataset.c:(c!='All'&&k.dataset.c!=c)));
-cats.forEach((c,i)=>{const b=document.createElement('button');const n=c=='All'?W.length+I.length:g.querySelectorAll(`.card[data-c="${c}"]:not(.more):not(.soon)`).length;b.dataset.cat=c;b.style.setProperty('--k',`var(--${c})`);b.innerHTML=`<b>${c}</b><span>${n} ${n==1?'project':'projects'}</span>`;if(!i)b.className='on';b.onclick=()=>{f.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');fil(c)};f.appendChild(b)});
+cats.forEach((c,i)=>{const b=document.createElement('button');const n=c=='All'?W.length+I.length:g.querySelectorAll(`.card[data-c="${c}"]:not(.more):not(.soon)`).length;b.dataset.cat=c;b.style.setProperty('--k',`var(--${c})`);b.innerHTML=`<b>${c}</b><span>${n?n+' '+(n==1?'project':'projects'):'Coming soon'}</span>`;if(!i)b.className='on';b.onclick=()=>{f.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');fil(c)};f.appendChild(b)});
 const lb=document.getElementById('lb'),fr=lb.querySelector('.fr');
 function open(el){if(el.classList.contains('more'))return;lb.querySelector('.cap').textContent='';if(el.dataset.soon)return;if(el.dataset.img){fr.className='fr pic';fr.innerHTML=`<img src="${el.dataset.img}" alt="${el.dataset.t}">`;lb.querySelector('.cap').innerHTML=el.dataset.t+(el.dataset.be?` · <a href="${el.dataset.be}" target="_blank" rel="noopener" style="color:var(--gold)">View on Behance ↗</a>`:'');lb.classList.add('on');return}fr.className='fr';const s=el.dataset.yt?`https://www.youtube-nocookie.com/embed/${el.dataset.yt}?autoplay=1&rel=0`:`https://drive.google.com/file/d/${el.dataset.dr}/preview`;fr.innerHTML=`<iframe referrerpolicy="strict-origin-when-cross-origin" src="${s}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;lb.querySelector('.cap').textContent=el.dataset.t;lb.classList.add('on')}
 function close(){lb.classList.remove('on');fr.innerHTML=''}
