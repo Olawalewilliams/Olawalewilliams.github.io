@@ -4,7 +4,7 @@
 <title>Wale Williams — Filmmaker</title>
 <meta name="description" content="Wale Williams — wedding films, commercials, documentaries and music videos from Nigeria.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#070707;--fg:#eee;--mute:#8a8a8a;--gold:#c9a45c}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -54,6 +54,15 @@ section{padding:110px 5vw}
 .meta h3{font-family:'Bebas Neue';font-weight:400;font-size:24px;letter-spacing:1px;margin-top:4px}
 .meta p{font-size:12px;color:#aaa;margin-top:4px}
 .card.hide{display:none}
+.bel{position:absolute;top:12px;right:12px;z-index:2;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:6px 10px;background:#000a;border:1px solid #555;color:#fff;text-decoration:none;opacity:0;transition:.3s}.card:hover .bel{opacity:1}
+.card.more{display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--fg);border:1px solid var(--gold);background:linear-gradient(135deg,#1a1408,#070707)}.card.more.hide{display:none}
+.card.more div{text-align:center;font-family:'Bebas Neue';font-size:34px;letter-spacing:4px}.card.more small{display:block;font:400 10px Inter;letter-spacing:3px;color:var(--gold);margin-top:10px}
+@media(hover:none){.bel{opacity:1}}
+.lede{color:#aaa;margin-top:18px;font-size:15px;letter-spacing:.5px}.lede b{color:var(--gold);font-weight:500}
+.card.im img{filter:grayscale(.35) brightness(.8)}.card.im:hover img{filter:none}
+.card.soon{cursor:default;grid-column:1/-1;aspect-ratio:auto;min-height:260px;display:flex;align-items:center;justify-content:center;border:1px dashed #3a3a3a;background:linear-gradient(135deg,#141008,#070707)}
+.card.soon div{text-align:center;font-family:'Bebas Neue';font-size:42px;letter-spacing:6px}.card.soon small{display:block;font:400 11px Inter;letter-spacing:3px;color:var(--mute);margin-top:10px}
+#lb .fr.pic{aspect-ratio:auto;background:none;display:flex;justify-content:center}#lb .fr.pic img{max-width:100%;max-height:86vh;object-fit:contain;box-shadow:0 30px 80px #000}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .ap{position:relative;padding:0 14% 14% 0}
 .ap .main{width:100%;aspect-ratio:1/1;object-fit:cover;filter:grayscale(1) contrast(1.1);display:block}
@@ -74,17 +83,60 @@ footer{padding:30px 5vw;font-size:11px;letter-spacing:3px;color:#555;text-align:
 #lb .cap{position:absolute;bottom:3vh;left:0;right:0;text-align:center;font-family:'Bebas Neue';font-size:24px;letter-spacing:3px}
 .rev{opacity:0;transform:translateY(40px);transition:1s}.rev.in{opacity:1;transform:none}
 @media(max-width:760px){.hero:after{background:linear-gradient(#000a,#000c 60%,#070707)}nav ul{display:none}.about{grid-template-columns:1fr}.grid{grid-template-columns:1fr}section{padding:80px 6vw}.bar{height:6vh}.hero .txt{padding-bottom:12vh}.stats{gap:24px}}
+
+/* ===== inspo restyle: light gallery, grotesk type, per-discipline pop colours ===== */
+:root{--bg:#f4f4f4;--fg:#141414;--mute:#7a7a7a;--gold:#c9a45c;--ez:cubic-bezier(.215,.61,.355,1);--Design:#ff007f;--Video:#007fff;--Film:#ff7f00;--Photography:#1fbf5a;--All:#c9a45c}
+body{font-family:'Inter Tight',Inter,sans-serif;font-weight:400;background:var(--bg);color:var(--fg)}
+.grain{display:none}
+nav{background:#f4f4f4f2;color:var(--fg);padding:16px 4vw;border-bottom:1px solid #e2e2e2;backdrop-filter:blur(6px)}
+.logo{font-size:24px;letter-spacing:3px;display:flex;align-items:baseline;gap:14px}.logo em{font:500 10px 'Inter Tight';letter-spacing:2px;text-transform:uppercase;color:var(--mute);font-style:normal}
+nav ul{gap:26px;font-weight:500;font-size:12px;letter-spacing:1.5px;align-items:center}
+nav ul a{transition:color .35s}nav ul a:hover{color:var(--Design)}
+nav .soc{display:flex;gap:8px}nav .soc a{width:28px;height:28px;border-radius:50%;background:#141414;color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:0;text-transform:none;transition:background .35s}nav .soc a:hover{background:var(--Design);color:#fff}
+.hero{color:#fff}.hero:after{background:linear-gradient(90deg,#000d 0%,#0008 50%,#0003 100%),linear-gradient(#0000 70%,#f4f4f4)}.bar{display:none}
+.hero .kick{color:#fff;font-weight:500;letter-spacing:4px}.hero .kick:before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--Design);box-shadow:16px 0 var(--Video),32px 0 var(--Film),48px 0 var(--Photography);margin-right:70px;vertical-align:1px}
+.hero .btn{border-color:#fff;color:#fff;border-radius:40px}.hero .btn:hover{background:#fff;color:#141414}
+.btn{border-radius:40px;font-weight:500;letter-spacing:2px;border-color:#141414;transition:background .35s var(--ez),color .35s}.btn:hover{background:#141414;color:#fff}
+.num{color:var(--mute);font-weight:500;letter-spacing:3px}.h2{color:var(--fg)}
+.lede{color:#555}.lede b{font-weight:700}
+#reel .play{color:#fff}
+/* discipline index (category list with counts) */
+.filters{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid #141414;margin:36px 0 30px}
+.filters button{border:0;border-bottom:1px solid #d8d8d8;border-radius:0;padding:18px 14px 16px;text-align:left;color:var(--fg);font:400 12px 'Inter Tight';letter-spacing:0;text-transform:none;display:flex;flex-direction:column;gap:6px;position:relative;transition:background .35s var(--ez),color .35s}
+.filters button b{font:400 clamp(26px,3vw,44px) 'Bebas Neue';letter-spacing:1px;line-height:.9}
+.filters button span{color:var(--mute);font-size:11px;letter-spacing:1px}.filters button span:after{content:" · explore →";opacity:0;transition:opacity .35s}
+.filters button:before{content:"";position:absolute;left:0;right:0;top:-1px;height:4px;background:var(--k);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ez)}
+.filters button:hover:before,.filters button.on:before{transform:none}.filters button:hover span:after{opacity:1}
+.filters button.on{background:var(--k);color:#fff;border-color:var(--k)}.filters button.on span{color:#fffc}
+.grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px 20px}
+.card{background:#e9e9e9;aspect-ratio:auto;overflow:visible;display:flex;flex-direction:column}
+.card>img,.card>.tc{position:relative;aspect-ratio:16/10;width:100%;height:auto;overflow:hidden}
+.card img{filter:none;transition:transform .5s var(--ez),opacity .35s}.card:hover img{transform:scale(1.04);filter:none}
+.card{background:transparent}.card>img{background:#e2e2e2;display:block;object-fit:cover}
+.card .tc{color:#fff}.card .tc small{color:#fff9}
+.meta{position:static;background:none;transform:none;opacity:1;padding:12px 0 0;border-top:3px solid var(--k);margin-top:0}
+.card:hover .meta{transform:none}
+.meta .c{color:var(--k);font-weight:700;letter-spacing:2px}.meta h3{color:var(--fg);font-size:26px}.meta p{color:var(--mute)}.meta p:after{content:"  see project →";color:var(--fg);opacity:0;transition:opacity .35s}.card:hover .meta p:after{opacity:1}
+.bel{opacity:1;background:#fff;color:#141414;border:0;border-radius:20px;font-weight:700;top:10px;right:10px}.bel:hover{background:var(--Design);color:#fff}
+.card.more{border:0;background:var(--Design);color:#fff;aspect-ratio:16/10;border-radius:0}.card.more small{color:#fffc}.card.more:hover{background:#141414}
+.card.soon{background:#e9e9e9;color:var(--fg);aspect-ratio:16/10}
+.about blockquote{color:var(--fg);border-color:var(--Design)}.ap .sec{border-color:var(--bg);box-shadow:0 20px 50px #0003}
+.stats span,.ph{color:var(--mute)}
+.contact{background:#141414;color:#fff}.contact .h2{color:#fff}.contact .num{color:#aaa}.contact .btn{border-color:#fff;color:#fff}.contact .btn:hover{background:var(--Design);border-color:var(--Design)}
+footer{background:#141414;color:#888;letter-spacing:2px}footer a:hover{color:#fff}
+#lb .cap a{color:var(--Design)!important}
+@media(max-width:820px){nav ul{display:flex}.hero:after{background:linear-gradient(#0009,#000b 65%,#f4f4f4)}nav ul li:not(.soc){display:none}.logo em{display:none}.filters{grid-template-columns:repeat(2,1fr)}.filters button:first-child{grid-column:1/-1}.grid{grid-template-columns:1fr}}
 </style></head><body>
 <div class="grain"></div>
-<nav><a class="logo" href="#top">WALE WILLIAMS</a><ul><li><a href="#reel">Showreel</a></li><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<nav><a class="logo" href="#top">WALE WILLIAMS<em>design · video · film · photo</em></a><ul><li><a href="#reel">Showreel</a></li><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li><li class="soc"><a href="https://www.behance.net/thewilliams" target="_blank" rel="noopener">Be</a><a href="https://www.linkedin.com/in/thewilliams/" target="_blank" rel="noopener">in</a><a href="https://www.youtube.com/@thewalewilliams" target="_blank" rel="noopener">YT</a></li></ul></nav>
 
 <header class="hero" id="top">
  <div class="bgv"><video id="bgv" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" src="hero.mp4" tabindex="-1" aria-hidden="true"></video></div>
  <div class="bar t"></div><div class="bar b"></div>
  <div class="txt rev">
-  <div class="kick">Filmmaker · Videographer · Lagos, Nigeria</div>
+  <div class="kick">Design · Video · Film · Photography — Lagos, Nigeria</div>
   <h1>WALE<br>WILLIAMS</h1>
-  <p class="tag">Weddings, commercials and stories, shot like cinema. Films that feel the way the day felt.</p>
+  <p class="tag">A designer, videographer, filmmaker and photographer. Weddings, brands and stories, made like cinema.</p>
   <a class="btn" href="#work">View the work</a>
  </div>
 </header>
@@ -99,6 +151,7 @@ footer{padding:30px 5vw;font-size:11px;letter-spacing:3px;color:#555;text-align:
 
 <section id="work">
  <div class="num">02 — SELECTED WORK</div><h2 class="h2 rev">The Work</h2>
+ <p class="lede rev">Four crafts, one eye: <b style="color:var(--Design)">Design</b>, <b style="color:var(--Video)">Video</b>, <b style="color:var(--Film)">Film</b> and <b style="color:var(--Photography)">Photography</b>.</p>
  <div class="filters" id="filters"></div>
  <div class="grid" id="grid"></div>
 </section>
@@ -110,68 +163,79 @@ footer{padding:30px 5vw;font-size:11px;letter-spacing:3px;color:#555;text-align:
   <blockquote>“I never went to film school. I just started.”</blockquote>
   <p>Four years ago, Wale was a graphic designer who got tired of static images, so he taught himself to make them move. No degree, no expensive gear, just a camera, a lot of bad first tries, and the stubborn belief that story matters more than credentials.</p>
   <p>Today he's a Creative Director and Editor at a global organisation, CCI Global, and the founder of his own production company, <b style="color:var(--fg);font-weight:600">ITAN Studios</b>. He's shot short films, told stories for startups, and photographed events where you learn to think on your feet, or miss the shot.</p>
-  <div class="stats"><div><b>4</b><span>Years self-taught</span></div><div><b>23+</b><span>Films online</span></div><div><b>ITAN</b><span>Studios founder</span></div></div>
+  <p>His work spans four disciplines: <b style="color:var(--fg);font-weight:600">design</b> (posters, key art and brand identity), <b style="color:var(--fg);font-weight:600">video</b> (weddings, commercials and music), <b style="color:var(--fg);font-weight:600">film</b> (shorts, documentary and trailers) and <b style="color:var(--fg);font-weight:600">photography</b> (events and portraits).</p>
+ <div class="stats"><div><b>4</b><span>Years self-taught</span></div><div><b>23+</b><span>Films online</span></div><div><b>ITAN</b><span>Studios founder</span></div></div>
  </div></div>
 </section>
 
 <section class="contact" id="contact">
  <div class="num">04 — CONTACT</div><h2 class="h2 rev">Let's Make<br>Something</h2>
- <p style="color:#aaa;margin-top:20px">Booking weddings, commercials and brand films.</p>
+ <p style="color:#aaa;margin-top:20px">Booking design, video, film and photography projects.</p>
  <div class="links">
   <a class="btn" href="mailto:thewilliamsofafrica@gmail.com">thewilliamsofafrica@gmail.com</a>
   <a class="btn" href="https://www.youtube.com/@thewalewilliams" target="_blank" rel="noopener">YouTube @thewalewilliams</a>
+  <a class="btn" href="https://www.behance.net/thewilliams" target="_blank" rel="noopener">Behance @thewilliams</a>
+  <a class="btn" href="https://www.linkedin.com/in/thewilliams/" target="_blank" rel="noopener">LinkedIn @thewilliams</a>
  </div>
 </section>
-<footer>© <span id="y"></span> Wale Williams · ITAN Studios · All films by Wale Williams</footer>
+<footer>© <span id="y"></span> Wale Williams · ITAN Studios · All films by Wale Williams · <a href="https://www.behance.net/thewilliams" target="_blank" rel="noopener" style="color:inherit">Behance</a> · <a href="https://www.youtube.com/@thewalewilliams" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/thewilliams/" target="_blank" rel="noopener">LinkedIn</a></footer>
 
 <div id="lb"><button class="x" aria-label="Close">×</button><div class="fr"></div><div class="cap"></div></div>
 
 <script>
 const W=[
-['yt','lH7uu_A1agQ','Yoruba Traditional Wedding','Weddings','Everything that happens at a Yoruba wedding'],
-['yt','a6JPLbdJXG8','A Celebration of Love & Laughter','Weddings','A simple wedding film · 4K'],
-['yt','immYTeQrESU','Nancy & Anselm','Weddings','A must-watch Nigerian wedding'],
-['yt','McPnxyg9cJU','Dee & Jay — Trailer','Weddings','Wedding trailer'],
-['yt','4rIrMbF8huE','Nigerian Wedding','Weddings','Wedding film'],
-['yt','b16enzt3rAE','Nigerian Traditional Wedding','Weddings','Traditional ceremony'],
-['yt','9KS8ZZ8tD6o','Can I Call You Rose','Weddings','Vintage Nigerian wedding look'],
-['dr','1Nar_NKP0wpi4vFVOgfmqfisb-fRVnbiV','Mr Putty','Commercials & Brand','TV commercial'],
-['dr','1y_Zk5AsHzja-lAXUhpGvU4INv85ozatn','Comfy','Commercials & Brand','Brand film'],
-['dr','1U4IGMse1BA0fyDiEDPMSDkVMTxWdHQk6','RevUp','Commercials & Brand','Brand film'],
-['dr','1TJNLfmdomjAedPz5iDzqoGHG7Ezyg72G','SAO Agro','Commercials & Brand','Corporate brand film'],
-['yt','oiJFhudGW0M','Your Brand / Your Branding','Commercials & Brand','Brand talk'],
-['yt','AVdvy8_NgfE','Brand-Killers','Commercials & Brand','Brand talk'],
-['dr','1QNQEhYKL98k90e2L2e2TxpAyWY3wcwfI','Meltdown','Short Films & Documentary','Narrative short'],
-['dr','1OpygoHsr4tOJELBwB_eLXUJBYMqf6d-a','Documentary','Short Films & Documentary','Documentary edit'],
-['dr','1Zo6vtTNHan7IF4-j4W8-S-B9KWQf4299','Love Code','Short Films & Documentary','Short film'],
-['dr','1Q_E5BsQnTQQYFkgiks7tZZLr88-Wfnqd','PFNNN','Short Films & Documentary','Short film'],
-['yt','p0LZBVv4-5o','Letters Across Channels','Short Films & Documentary','Short film'],
-['yt','fB5muZEeDPs','What Really Matters','Short Films & Documentary','Short film'],
-['dr','1IaaVBeuGbmVrRwCR-DZb0fzmiHJUBNos','JIV — Spell','Music & Live','Music video'],
-['yt','yHKm7lE_t1s','Paul Rarity Live','Music & Live','Live in concert'],
-['dr','1vblaPj0Y9zIZ9t8lCv4ORCaPEMPsxbtz','GetFit — Kike','Corporate & Testimonials','Client testimonial'],
-['yt','ZRHUnQjGAlE','Why Branding Matters','Corporate & Testimonials','Pt. 01'],
-['yt','txDlNs2wFI0','A Little BTS of the Magic','Reels/BTS','Behind the scenes'],
-['yt','vc9XAmT0lXo','A One Hour Shoot','Reels/BTS','Behind the scenes'],
-['yt','y93IbW0dDe4','Trad Wedding Reel','Reels/BTS','Short'],
-['yt','5G_jc5hs5UM','Old School Looks','Reels/BTS','Short'],
-['yt','KqoDMag2pwk','What Do You Do?','Reels/BTS','Short']];
-const cats=['All','Weddings','Commercials & Brand','Short Films & Documentary','Music & Live','Corporate & Testimonials','Reels/BTS'];
+['yt','lH7uu_A1agQ','Yoruba Traditional Wedding','Video','Weddings','Everything that happens at a Yoruba wedding'],
+['yt','a6JPLbdJXG8','A Celebration of Love & Laughter','Video','Weddings','A simple wedding film · 4K'],
+['yt','immYTeQrESU','Nancy & Anselm','Video','Weddings','A must-watch Nigerian wedding'],
+['yt','McPnxyg9cJU','Dee & Jay — Trailer','Video','Weddings','Wedding trailer'],
+['yt','4rIrMbF8huE','Nigerian Wedding','Video','Weddings','Wedding film'],
+['yt','b16enzt3rAE','Nigerian Traditional Wedding','Video','Weddings','Traditional ceremony'],
+['yt','9KS8ZZ8tD6o','Can I Call You Rose','Video','Weddings','Vintage Nigerian wedding look'],
+['dr','1Nar_NKP0wpi4vFVOgfmqfisb-fRVnbiV','Mr Putty','Video','Commercials & Brand','TV commercial'],
+['dr','1y_Zk5AsHzja-lAXUhpGvU4INv85ozatn','Comfy','Video','Commercials & Brand','Brand film'],
+['dr','1U4IGMse1BA0fyDiEDPMSDkVMTxWdHQk6','RevUp','Video','Commercials & Brand','Brand film'],
+['dr','1TJNLfmdomjAedPz5iDzqoGHG7Ezyg72G','SAO Agro','Video','Commercials & Brand','Corporate brand film'],
+['yt','oiJFhudGW0M','Your Brand / Your Branding','Video','Commercials & Brand','Brand talk'],
+['yt','AVdvy8_NgfE','Brand-Killers','Video','Commercials & Brand','Brand talk'],
+['dr','1QNQEhYKL98k90e2L2e2TxpAyWY3wcwfI','Meltdown','Film','Feature trailer','Narrative · trailer'],
+['dr','1OpygoHsr4tOJELBwB_eLXUJBYMqf6d-a','Documentary','Film','Short Films & Documentary','Documentary edit'],
+['dr','1Zo6vtTNHan7IF4-j4W8-S-B9KWQf4299','Love Code','Film','Short Films & Documentary','Short film'],
+['dr','1Q_E5BsQnTQQYFkgiks7tZZLr88-Wfnqd','PFNNN','Film','Short Films & Documentary','Short film'],
+['yt','p0LZBVv4-5o','Letters Across Channels','Film','Short Films & Documentary','Short film'],
+['yt','fB5muZEeDPs','What Really Matters','Film','Short Films & Documentary','Short film'],
+['dr','1IaaVBeuGbmVrRwCR-DZb0fzmiHJUBNos','JIV — Spell','Video','Music & Live','Music video'],
+['yt','yHKm7lE_t1s','Paul Rarity Live','Video','Music & Live','Live in concert'],
+['dr','1vblaPj0Y9zIZ9t8lCv4ORCaPEMPsxbtz','GetFit — Kike','Video','Corporate & Testimonials','Client testimonial'],
+['yt','ZRHUnQjGAlE','Why Branding Matters','Video','Corporate & Testimonials','Pt. 01'],
+['yt','txDlNs2wFI0','A Little BTS of the Magic','Video','Reels & BTS','Behind the scenes'],
+['yt','vc9XAmT0lXo','A One Hour Shoot','Video','Reels & BTS','Behind the scenes'],
+['yt','y93IbW0dDe4','Trad Wedding Reel','Video','Reels & BTS','Short'],
+['yt','5G_jc5hs5UM','Old School Looks','Video','Reels & BTS','Short'],
+['yt','KqoDMag2pwk','What Do You Do?','Video','Reels & BTS','Short']];
+const I=[
+['img/photo-01.jpg','Celebration','Photography','Event'],['img/photo-02.jpg','Brothers','Photography','Portrait'],['img/photo-03.jpg','The Crew','Photography','Event'],['img/photo-04.jpg','Side by Side','Photography','Portrait'],['img/photo-05.jpg','Laughter','Photography','Event'],['img/photo-06.jpg','The Team','Photography','Group portrait'],['img/photo-07.jpg','Full Length','Photography','Portrait'],['img/photo-08.jpg','Leather & Light','Photography','Portrait'],['img/photo-09.jpg','Candid','Photography','Portrait'],['img/photo-10.jpg','Cream Suit','Photography','Portrait'],['img/photo-11.jpg','Together','Photography','Event'],
+['img/behance-identity-design-for-cubana-beauty-shop.jpg',"Identity design for Cubana beauty shop",'Design','Behance project','https://www.behance.net/gallery/119121097/Identity-design-for-Cubana-beauty-shop'],['img/behance-logo-reveal-for-cubana-beauty-shop.jpg',"Logo reveal for CUBANA Beauty shop",'Design','Behance project','https://www.behance.net/gallery/119675705/Logo-reveal-for-CUBANA-Beauty-shop'],['img/behance-identity-design.jpg',"Identity Design",'Design','Behance project','https://www.behance.net/gallery/147453503/IDENTITY-DESIGN'],['img/behance-identity.jpg',"Identity",'Design','Behance project','https://www.behance.net/gallery/71188361/Identity'],['img/behance-ella-matthew.jpg',"Ella Matthew",'Design','Behance project','https://www.behance.net/gallery/92087617/ELLA-MATTHEW'],['img/behance-woman-of-colour.jpg',"Woman of Colour",'Design','Behance project','https://www.behance.net/gallery/92086795/WOMAN-OF-COLOUR'],['img/behance-brochure-design-for-femi-micheal-photography.jpg',"Brochure Design for Femi Micheal Photography",'Design','Behance project','https://www.behance.net/gallery/92086585/BROCHURE-DESIGN-FOR-FEMI-MICHEAL-PHOTOGRAPHY'],['img/behance-slides.jpg',"Slides",'Design','Behance project','https://www.behance.net/gallery/147453123/Slides'],['img/behance-other-projects.jpg',"Other Projects",'Design','Behance project','https://www.behance.net/gallery/92087025/OTHER-PROJECTS'],['img/behance-design-potfolio.jpg',"Design Portfolio",'Design','Behance project','https://www.behance.net/gallery/165221241/DESIGN-POTFOLIO'],['img/behance-design-portfolio.jpg',"Design Portfolio (2020)",'Design','Behance project','https://www.behance.net/gallery/92151455/DESIGN-PORTFOLIO']];
+const cats=['All','Design','Video','Film','Photography'];
 const g=document.getElementById('grid'),f=document.getElementById('filters');
 const grads=['#2a1a0e,#0a0a0a','#0e1a2a,#050505','#2a0e14,#070707','#1a2a1e,#060606'];
-W.forEach((w,i)=>{const d=document.createElement('div');d.className='card rev';d.dataset.c=w[3];d.dataset[w[0]]=w[1];d.dataset.t=w[2];
- const vis=w[0]=='yt'?`<img loading="lazy" src="https://i.ytimg.com/vi/${w[1]}/hqdefault.jpg" alt="${w[2]}">`:`<div class="tc" style="background:linear-gradient(135deg,${grads[i%4]})"><div>${w[2]}<small>${w[4].toUpperCase()}</small></div></div>`;
- d.innerHTML=vis+`<div class="meta"><div class="c">${w[3]}</div><h3>${w[2]}</h3><p>${w[4]}</p></div>`;g.appendChild(d)});
-cats.forEach((c,i)=>{const b=document.createElement('button');b.textContent=c;if(!i)b.className='on';b.onclick=()=>{f.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');g.querySelectorAll('.card').forEach(k=>k.classList.toggle('hide',c!='All'&&k.dataset.c!=c))};f.appendChild(b)});
+W.forEach((w,i)=>{const d=document.createElement('div');d.className='card rev';d.dataset.c=w[3];d.style.setProperty('--k',`var(--${w[3]})`);d.dataset.s=w[4];d.dataset[w[0]]=w[1];d.dataset.t=w[2];
+ const vis=w[0]=='yt'?`<img loading="lazy" src="https://i.ytimg.com/vi/${w[1]}/hqdefault.jpg" alt="${w[2]}">`:`<div class="tc" style="background:linear-gradient(135deg,${grads[i%4]})"><div>${w[2]}<small>${w[5].toUpperCase()}</small></div></div>`;
+ d.innerHTML=vis+`<div class="meta"><div class="c">${w[3]} · ${w[4]}</div><h3>${w[2]}</h3><p>${w[5]}</p></div>`;g.appendChild(d)});
+I.forEach(w=>{const d=document.createElement('div');d.className='card im rev';d.dataset.c=w[2];d.style.setProperty('--k',`var(--${w[2]})`);d.dataset.img=w[0];d.dataset.t=w[1];if(w[4])d.dataset.be=w[4];
+ d.innerHTML=`<img loading="lazy" src="${w[0]}" alt="${w[1]}, ${w[3]} by Wale Williams"><div class="meta"><div class="c">${w[2]}</div><h3>${w[1]}</h3><p>${w[3]}</p></div>`+(w[4]?`<a class="bel" href="${w[4]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Behance ↗</a>`:``);g.appendChild(d)});
+{const m=document.createElement('a');m.className='card more';m.dataset.c='Design';m.href='https://www.behance.net/thewilliams';m.target='_blank';m.rel='noopener';m.innerHTML='<div>View more on Behance<small>BEHANCE.NET/THEWILLIAMS ↗</small></div>';g.appendChild(m)}
+cats.slice(1).forEach(c=>{if(!g.querySelector(`.card[data-c="${c}"]`)){const d=document.createElement('div');d.className='card soon hide';d.dataset.c=c;d.dataset.soon=1;d.innerHTML=`<div>${c}<small>COMING SOON</small></div>`;g.appendChild(d)}});
+const fil=c=>g.querySelectorAll('.card').forEach(k=>k.classList.toggle('hide',k.dataset.soon?c!=k.dataset.c:(c!='All'&&k.dataset.c!=c)));
+cats.forEach((c,i)=>{const b=document.createElement('button');const n=c=='All'?W.length+I.length:g.querySelectorAll(`.card[data-c="${c}"]:not(.more):not(.soon)`).length;b.dataset.cat=c;b.style.setProperty('--k',`var(--${c})`);b.innerHTML=`<b>${c}</b><span>${n} ${n==1?'project':'projects'}</span>`;if(!i)b.className='on';b.onclick=()=>{f.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');fil(c)};f.appendChild(b)});
 const lb=document.getElementById('lb'),fr=lb.querySelector('.fr');
-function open(el){const s=el.dataset.yt?`https://www.youtube-nocookie.com/embed/${el.dataset.yt}?autoplay=1&rel=0`:`https://drive.google.com/file/d/${el.dataset.dr}/preview`;fr.innerHTML=`<iframe referrerpolicy="strict-origin-when-cross-origin" src="${s}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;lb.querySelector('.cap').textContent=el.dataset.t;lb.classList.add('on')}
+function open(el){if(el.classList.contains('more'))return;lb.querySelector('.cap').textContent='';if(el.dataset.soon)return;if(el.dataset.img){fr.className='fr pic';fr.innerHTML=`<img src="${el.dataset.img}" alt="${el.dataset.t}">`;lb.querySelector('.cap').innerHTML=el.dataset.t+(el.dataset.be?` · <a href="${el.dataset.be}" target="_blank" rel="noopener" style="color:var(--gold)">View on Behance ↗</a>`:'');lb.classList.add('on');return}fr.className='fr';const s=el.dataset.yt?`https://www.youtube-nocookie.com/embed/${el.dataset.yt}?autoplay=1&rel=0`:`https://drive.google.com/file/d/${el.dataset.dr}/preview`;fr.innerHTML=`<iframe referrerpolicy="strict-origin-when-cross-origin" src="${s}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;lb.querySelector('.cap').textContent=el.dataset.t;lb.classList.add('on')}
 function close(){lb.classList.remove('on');fr.innerHTML=''}
-document.querySelectorAll('.card,.reel').forEach(e=>e.onclick=()=>open(e));
+document.querySelectorAll('.card:not(.more),.reel').forEach(e=>e.onclick=()=>open(e));
 lb.onclick=e=>{if(e.target===lb||e.target.classList.contains('x'))close()};
 document.addEventListener('keydown',e=>e.key=='Escape'&&close());
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.1});
 document.querySelectorAll('.rev').forEach(e=>io.observe(e));
 const q=new URLSearchParams(location.search);
-if(q.has('shot')){document.querySelector('.hero').style.height='900px';document.querySelectorAll('.rev').forEach(e=>e.classList.add('in'));if(q.get('shot')=='grid')addEventListener('load',()=>setTimeout(()=>scrollTo(0,document.getElementById('work').offsetTop-20),300))}
+if(q.has('shot')){document.querySelector('.hero').style.height='900px';document.querySelectorAll('.rev').forEach(e=>e.classList.add('in'));if(q.get('tab')){const b=[...f.children].find(x=>x.dataset.cat==q.get('tab'));b&&b.click()}if(q.get('shot')=='grid')addEventListener('load',()=>setTimeout(()=>scrollTo(0,document.getElementById('work').offsetTop-20),300))}
 document.getElementById('y').textContent=new Date().getFullYear();
 </script></body></html>
