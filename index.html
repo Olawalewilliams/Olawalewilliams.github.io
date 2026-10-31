@@ -126,9 +126,16 @@ nav .soc{display:flex;gap:8px}nav .soc a{width:28px;height:28px;border-radius:50
 footer{background:#141414;color:#888;letter-spacing:2px}footer a:hover{color:#fff}
 #lb .cap a{color:var(--Design)!important}
 @media(max-width:820px){nav ul{display:flex}.hero:after{background:linear-gradient(#0009,#000b 65%,#f4f4f4)}nav ul li:not(.soc){display:none}.logo em{display:none}.filters{grid-template-columns:repeat(2,1fr)}.filters button:first-child{grid-column:1/-1}.grid{grid-template-columns:1fr}}
+#lb .fr.igf{width:min(480px,94vw);aspect-ratio:auto;height:min(86vh,820px);background:#fff}
+.fs-media{background:#fff;border:1px solid #e2e2e2;box-shadow:16px 16px 0 var(--Video)}
+.fs-media iframe{display:block;width:100%;height:560px;border:0;background:#fff}
+.fs-btn{background:var(--Video);border-color:var(--Video);color:#fff}.fs-btn:hover{background:#141414;border-color:#141414}
+.reel-ig{max-width:540px;margin:40px auto 0}
+.ri-cap h3{font:400 clamp(36px,4.5vw,72px)/.95 'Bebas Neue';letter-spacing:1px}.ri-cap p{margin-top:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px;color:var(--Video)}
+@media(max-width:820px){.fs-media{box-shadow:8px 8px 0 var(--Video)}.fs-media iframe{height:430px}}
 </style></head><body>
 <div class="grain"></div>
-<nav><a class="logo" href="#top">WALE WILLIAMS<em>design · video · film · photo</em></a><ul><li><a href="#reel">Showreel</a></li><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li><li class="soc"><a href="https://www.behance.net/thewilliams" target="_blank" rel="noopener">Be</a><a href="https://www.linkedin.com/in/thewilliams/" target="_blank" rel="noopener">in</a><a href="https://www.youtube.com/@thewalewilliams" target="_blank" rel="noopener">YT</a></li></ul></nav>
+<nav><a class="logo" href="#top">WALE WILLIAMS<em>design · video · film · photo</em></a><ul><li><a href="#reel">Showreel</a></li><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li><li class="soc"><a href="https://www.behance.net/thewilliams" target="_blank" rel="noopener">Be</a><a href="https://www.linkedin.com/in/thewilliams/" target="_blank" rel="noopener">in</a><a href="https://www.youtube.com/@thewalewilliams" target="_blank" rel="noopener">YT</a><a href="https://www.instagram.com/thewalewilliams/" target="_blank" rel="noopener">IG</a></li></ul></nav>
 
 <header class="hero" id="top">
  <div class="bgv"><video id="bgv" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" src="hero.mp4" tabindex="-1" aria-hidden="true"></video></div>
@@ -143,9 +150,8 @@ footer{background:#141414;color:#888;letter-spacing:2px}footer a:hover{color:#ff
 
 <section id="reel">
  <div class="num">01 — FEATURED</div><h2 class="h2 rev">The Showreel</h2>
- <div class="reel rev" data-yt="lH7uu_A1agQ" data-t="Yoruba Traditional Wedding">
-  <img src="https://i.ytimg.com/vi/lH7uu_A1agQ/maxresdefault.jpg" alt="Yoruba Traditional Wedding">
-  <div class="play"><i>▶</i><span>Yoruba Traditional Wedding — Everything that happens</span></div>
+ <div class="reel-ig rev">
+  <div class="fs-media"><iframe src="https://www.instagram.com/p/DYrUsrIjOju/embed" title="Love Abolade — Music Video on Instagram" loading="lazy" allowtransparency="true" allow="autoplay; encrypted-media; fullscreen" allowfullscreen scrolling="no"></iframe></div>
  </div>
 </section>
 
@@ -176,14 +182,19 @@ footer{background:#141414;color:#888;letter-spacing:2px}footer a:hover{color:#ff
   <a class="btn" href="https://www.youtube.com/@thewalewilliams" target="_blank" rel="noopener">YouTube @thewalewilliams</a>
   <a class="btn" href="https://www.behance.net/thewilliams" target="_blank" rel="noopener">Behance @thewilliams</a>
   <a class="btn" href="https://www.linkedin.com/in/thewilliams/" target="_blank" rel="noopener">LinkedIn @thewilliams</a>
+  <a class="btn" href="https://www.instagram.com/thewalewilliams/" target="_blank" rel="noopener">Instagram @thewalewilliams</a>
  </div>
 </section>
-<footer>© <span id="y"></span> Wale Williams · ITAN Studios · All films by Wale Williams · <a href="https://www.behance.net/thewilliams" target="_blank" rel="noopener" style="color:inherit">Behance</a> · <a href="https://www.youtube.com/@thewalewilliams" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/thewilliams/" target="_blank" rel="noopener">LinkedIn</a></footer>
+<footer>© <span id="y"></span> Wale Williams · ITAN Studios · All films by Wale Williams · <a href="https://www.behance.net/thewilliams" target="_blank" rel="noopener" style="color:inherit">Behance</a> · <a href="https://www.youtube.com/@thewalewilliams" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/in/thewilliams/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.instagram.com/thewalewilliams/" target="_blank" rel="noopener">Instagram</a></footer>
 
 <div id="lb"><button class="x" aria-label="Close">×</button><div class="fr"></div><div class="cap"></div></div>
 
 <script>
 const W=[
+['ig','DXU0QnRDI6N','The Energio — Campaign Visuals','Video','Commercials & Brand','Directed for @the_energio · ITAN Studios · Instagram'],
+['ig','DavSXcCjMU6','T30 Devotion','Video','Music & Live','Worship session film for @t30devotion · Instagram'],
+['ig','DYrUsrIjOju','Love Abolade — Music Video','Video','Music & Live','Directed by Wale Williams · Instagram'],
+['ig','DQFCzt7iB-Z','Propella Schools — Documentary','Film','Short Films & Documentary','Free-school documentary for CCI Global · Instagram'],
 ['yt','lH7uu_A1agQ','Yoruba Traditional Wedding','Video','Weddings','Everything that happens at a Yoruba wedding'],
 ['yt','a6JPLbdJXG8','A Celebration of Love & Laughter','Video','Weddings','A simple wedding film · 4K'],
 ['yt','immYTeQrESU','Nancy & Anselm','Video','Weddings','A must-watch Nigerian wedding'],
@@ -213,8 +224,8 @@ const cats=['All','Design','Video','Film','Photography'];
 const g=document.getElementById('grid'),f=document.getElementById('filters');
 const grads=['#2a1a0e,#0a0a0a','#0e1a2a,#050505','#2a0e14,#070707','#1a2a1e,#060606'];
 W.forEach((w,i)=>{const d=document.createElement('div');d.className='card rev';d.dataset.c=w[3];d.style.setProperty('--k',`var(--${w[3]})`);d.dataset.s=w[4];d.dataset[w[0]]=w[1];d.dataset.t=w[2];
- const vis=w[0]=='yt'?`<img loading="lazy" src="https://i.ytimg.com/vi/${w[1]}/hqdefault.jpg" alt="${w[2]}">`:`<div class="tc" style="background:linear-gradient(135deg,${grads[i%4]})"><div>${w[2]}<small>${w[5].toUpperCase()}</small></div></div>`;
- d.innerHTML=vis+`<div class="meta"><div class="c">${w[3]} · ${w[4]}</div><h3>${w[2]}</h3><p>${w[5]}</p></div>`;g.appendChild(d)});
+ const vis=w[0]=='ig'?`<img loading="lazy" src="img/ig-${w[1]}.jpg" alt="${w[2]}">`:w[0]=='yt'?`<img loading="lazy" src="https://i.ytimg.com/vi/${w[1]}/hqdefault.jpg" alt="${w[2]}">`:`<div class="tc" style="background:linear-gradient(135deg,${grads[i%4]})"><div>${w[2]}<small>${w[5].toUpperCase()}</small></div></div>`;
+ d.innerHTML=vis+(w[0]=='ig'?`<a class="bel" href="https://www.instagram.com/p/${w[1]}/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Instagram ↗</a>`:'')+`<div class="meta"><div class="c">${w[3]} · ${w[4]}</div><h3>${w[2]}</h3><p>${w[5]}</p></div>`;g.appendChild(d)});
 I.forEach(w=>{const d=document.createElement('div');d.className='card im rev';d.dataset.c=w[2];d.style.setProperty('--k',`var(--${w[2]})`);d.dataset.img=w[0];d.dataset.t=w[1];if(w[4])d.dataset.be=w[4];
  d.innerHTML=`<img loading="lazy" src="${w[0]}" alt="${w[1]}, ${w[3]} by Wale Williams"><div class="meta"><div class="c">${w[2]}</div><h3>${w[1]}</h3><p>${w[3]}</p></div>`+(w[4]?`<a class="bel" href="${w[4]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Behance ↗</a>`:``);g.appendChild(d)});
 {const m=document.createElement('a');m.className='card more';m.dataset.c='Design';m.href='https://www.behance.net/thewilliams';m.target='_blank';m.rel='noopener';m.innerHTML='<div>View more on Behance<small>BEHANCE.NET/THEWILLIAMS ↗</small></div>';g.appendChild(m)}
@@ -222,7 +233,7 @@ cats.slice(1).forEach(c=>{if(!g.querySelector(`.card[data-c="${c}"]`)){const d=d
 const fil=c=>g.querySelectorAll('.card').forEach(k=>k.classList.toggle('hide',k.dataset.soon?c!=k.dataset.c:(c!='All'&&k.dataset.c!=c)));
 cats.forEach((c,i)=>{const b=document.createElement('button');const n=c=='All'?W.length+I.length:g.querySelectorAll(`.card[data-c="${c}"]:not(.more):not(.soon)`).length;b.dataset.cat=c;b.style.setProperty('--k',`var(--${c})`);b.innerHTML=`<b>${c}</b><span>${n?n+' '+(n==1?'project':'projects'):'Coming soon'}</span>`;if(!i)b.className='on';b.onclick=()=>{f.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');fil(c)};f.appendChild(b)});
 const lb=document.getElementById('lb'),fr=lb.querySelector('.fr');
-function open(el){if(el.classList.contains('more'))return;lb.querySelector('.cap').textContent='';if(el.dataset.soon)return;if(el.dataset.img){fr.className='fr pic';fr.innerHTML=`<img src="${el.dataset.img}" alt="${el.dataset.t}">`;lb.querySelector('.cap').innerHTML=el.dataset.t+(el.dataset.be?` · <a href="${el.dataset.be}" target="_blank" rel="noopener" style="color:var(--gold)">View on Behance ↗</a>`:'');lb.classList.add('on');return}fr.className='fr';const s=el.dataset.yt?`https://www.youtube-nocookie.com/embed/${el.dataset.yt}?autoplay=1&rel=0`:`https://drive.google.com/file/d/${el.dataset.dr}/preview`;fr.innerHTML=`<iframe referrerpolicy="strict-origin-when-cross-origin" src="${s}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;lb.querySelector('.cap').textContent=el.dataset.t;lb.classList.add('on')}
+function open(el){if(el.classList.contains('more'))return;lb.querySelector('.cap').textContent='';if(el.dataset.soon)return;if(el.dataset.img){fr.className='fr pic';fr.innerHTML=`<img src="${el.dataset.img}" alt="${el.dataset.t}">`;lb.querySelector('.cap').innerHTML=el.dataset.t+(el.dataset.be?` · <a href="${el.dataset.be}" target="_blank" rel="noopener" style="color:var(--gold)">View on Behance ↗</a>`:'');lb.classList.add('on');return}fr.className=el.dataset.ig?'fr igf':'fr';const s=el.dataset.ig?`https://www.instagram.com/p/${el.dataset.ig}/embed`:el.dataset.yt?`https://www.youtube-nocookie.com/embed/${el.dataset.yt}?autoplay=1&rel=0`:`https://drive.google.com/file/d/${el.dataset.dr}/preview`;fr.innerHTML=`<iframe referrerpolicy="strict-origin-when-cross-origin" src="${s}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;lb.querySelector('.cap').textContent=el.dataset.t;lb.classList.add('on')}
 function close(){lb.classList.remove('on');fr.innerHTML=''}
 document.querySelectorAll('.card:not(.more),.reel').forEach(e=>e.onclick=()=>open(e));
 lb.onclick=e=>{if(e.target===lb||e.target.classList.contains('x'))close()};
